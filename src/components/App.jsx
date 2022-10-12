@@ -4,9 +4,9 @@ import Statistics from "./statistics/Statistics";
 import { useState } from "react";
 
 export function App(){
-  const[Good,setGood]=useState(0)
-  const[Neutral,setNeutral]=useState(0)
-  const[Bad,setBad]=useState(0)
+  const[good,setGood]=useState(0)
+  const[neutral,setNeutral]=useState(0)
+  const[bad,setBad]=useState(0)
 
   const buttonClick=(e)=>{
     switch(e.target.name){
@@ -26,13 +26,13 @@ export function App(){
           return
     }
    }
-   const total = Good + Neutral + Bad
-   const positivePercentage = Math.round(Good / total * 100)
+   const total = good + neutral + bad
+   const positivePercentage = Math.round(good / total * 100)
    return (
     <>
     <Section title="Please leave a feedback" children={<FeedbackOptions onLeaveFeedback={buttonClick}/>}/>
     <Section title='Statistics'
-     children={<Statistics good={Good} neutral={Neutral} bad={Bad} 
+     children={<Statistics good={good} neutral={neutral} bad={bad} 
      total={total} positivePercentage={positivePercentage}/>}/>
     </>
   )
