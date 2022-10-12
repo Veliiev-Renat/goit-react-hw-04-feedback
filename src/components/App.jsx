@@ -11,13 +11,16 @@ export function App(){
   const buttonClick=(e)=>{
     switch(e.target.name){
       case 'Good':
-        setGood((prev)=>(prev+1));
+        setGood((prev)=>(prev+1))
+        break;
 
         case 'Neutral':
-        setNeutral((prev)=>(prev+1));
+        setNeutral((prev)=>(prev+1))
+        break;
 
         case 'Bad':
-        setBad((prev)=>(prev+1));
+        setBad((prev)=>(prev+1))
+        break;
         
         default:
           return

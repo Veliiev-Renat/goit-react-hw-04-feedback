@@ -1,4 +1,3 @@
-import { Component } from "react";
 import PropTypes from 'prop-types';
 
 const buttonStyle = {display:'flex',
@@ -21,24 +20,6 @@ function FeedbackOptions({onLeaveFeedback}){
             </ul>
         )
 }
-// export default class FeedbackOptions extends Component{
-
-// buttonsName=['Good','Neutral','Bad']
-
-// render(){
-// return(<>
-//     <ul style={{display:'flex'}}>
-//         {this.buttonsName.map(name=>(
-//             <li style={{marginRight:"15px"}} key={name}><button type="button" style={buttonStyle}
-//              name={name} onClick={this.props.onLeaveFeedback}>{name}
-//              </button>
-//              </li>
-//         ))}
-//     </ul>
-// </>
-// )
-//       }
-//     }
 
 FeedbackOptions.propTypes={
     onLeaveFeedback:PropTypes.func
